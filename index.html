@@ -1,41 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
+    <link rel=icon
+          href="https://user-images.githubusercontent.com/40480197/104395262-b2973080-558b-11eb-8270-4c00973e8cd9.png"
+          sizes="16x16" type="image/png">
     <link rel="stylesheet" href="https://unpkg.com/bulma-pro">
+    <link rel="stylesheet" href="assets/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Keisuke Kubota</title>
 </head>
-<body>
+<body class="is-family-code">
+<nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item" href="">
+            <img src="https://user-images.githubusercontent.com/40480197/104395265-b3c85d80-558b-11eb-8ee9-e6fd6eb7f427.png"
+                 class="is-128x128" alt="Hasan icon">
+        </a>
+        <h1 class="title" id="title">Hasan</h1>
+
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+
+    <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+            <a class="navbar-item">
+                home
+            </a>
+            <a class="navbar-item">
+                AboutMe
+            </a>
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link">
+                    More
+                </a>
+                <div class="navbar-dropdown">
+                    <a class="navbar-item">
+                        Tech Blog
+                    </a>
+                    <a class="navbar-item">
+                        Music Blog
+                    </a>
+                    <a class="navbar-item">
+                        Blog
+                    </a>
+                    <hr class="navbar-divider">
+                    <a class="navbar-item">
+                        Contact
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="navbar-end">
+            <div class="navbar-item">
+                <div class="buttons">
+                    <a class="button is-primary">
+                        <strong>Sign up</strong>
+                    </a>
+                    <a class="button is-light">
+                        Log in
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
 <div class="columns">
-    <div class="column is-full">
+    <div class="column is-6-desktop is-offset-3-desktop">
         <div class="card">
             <div class="card-image">
                 <figure class="image is-4by3">
-                    <img src="https://user-images.githubusercontent.com/40480197/104292234-ea589680-54ff-11eb-85a0-8248a6dac803.jpg"
+                    <img src="https://user-images.githubusercontent.com/40480197/104309755-01a27e80-5516-11eb-8a55-bb21ce35cf98.jpg"
                          alt="Placeholder image">
                 </figure>
             </div>
             <div class="card-content">
                 <div class="media">
-                    <div class="media-left">
-                        <figure class="image is-48x48">
-                            <img src="https://user-images.githubusercontent.com/40480197/104267842-cf712c80-54d5-11eb-9e15-6d97082fb091.jpg"
-                                 alt="Placeholder image">
-                        </figure>
-                    </div>
                     <div>
-                        <p class="title is-4">
+                        <div class="title is-4 has-text-weight-bold">
                             Keisuke Kubota
-                        </p>
-                        <p class="subtitle is-6">
-                            @kubosuke
-                        </p>
+                            <div class="subtitle is-5 has-text-weight-bold">
+                                @kubosuke
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="content">
-                    visit here if you want more about me<br>
+                    <p class="is-size-5 has-text-weight-light">visit here if you want more about me</p>
                     <div class="has-text-weight-bold">
-                        <a href="">#profile</a> <a href="">#resume</a> <a href="">#blog</a>
+                        <p class="is-size-5 has-text-weight-light"><a href="">#AboutMe</a> <a href="">#TechBlog</a> <a
+                                href="">#MusicBlog</a> <a href="">#Blog</a> <a href="">#Contact</a></p>
                     </div>
                     <br><br>
                     <p>Born on 30/11/1995</p>
@@ -43,8 +101,8 @@
             </div>
             <footer class="card-footer">
                 <div class="card-footer-item has-text-left">
-                    <div class="columns">
-                        <div class="column is-one-quarter">
+                    <div class="columns is-mobile">
+                        <div class="column">
                             <figure class="image is-48x48">
                                 <a href="https://twitter.com/kkpckr">
                                     <img class="is-shadowless"
@@ -53,7 +111,7 @@
                                 </a>
                             </figure>
                         </div>
-                        <div class="column is-one-quarter">
+                        <div class="column">
                             <figure class="image is-48x48">
                                 <a href="https://www.instagram.com/hasan_the_journey/">
                                     <img class="is-shadowless"
@@ -62,8 +120,7 @@
                                 </a>
                             </figure>
                         </div>
-                        <div class="column is-one-quarter">
-
+                        <div class="column">
                             <figure class="image is-48x48">
                                 <a href="https://my.indeed.com/p/keisukek-7biul6m">
                                     <img class="is-shadowless"
@@ -75,15 +132,6 @@
                     </div>
                 </div>
             </footer>
-        </div>
-    </div>
-</div>
-<div class="columns">
-    <div class="column is-full">
-        <div class="card">
-            <a class="twitter-timeline" href="https://twitter.com/kkpckr?ref_src=twsrc%5Etfw">Tweets by
-                kkpckr</a>
-            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div>
     </div>
 </div>
