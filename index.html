@@ -6,69 +6,62 @@
           href="https://user-images.githubusercontent.com/40480197/104395262-b2973080-558b-11eb-8270-4c00973e8cd9.png"
           sizes="16x16" type="image/png">
     <link rel="stylesheet" href="https://unpkg.com/bulma-pro">
-    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Keisuke Kubota</title>
 </head>
 <body class="is-family-code">
-<nav class="navbar" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-        <a class="navbar-item" href="">
-            <img src="https://user-images.githubusercontent.com/40480197/104395265-b3c85d80-558b-11eb-8ee9-e6fd6eb7f427.png"
-                 class="is-128x128" alt="Hasan icon">
-        </a>
-        <h1 class="title" id="title">Hasan</h1>
-
-        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-        </a>
-    </div>
-
-    <div id="navbarBasicExample" class="navbar-menu">
-        <div class="navbar-start">
-            <a class="navbar-item">
-                home
+<div id="app">
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="">
+                <img src="https://user-images.githubusercontent.com/40480197/104395265-b3c85d80-558b-11eb-8ee9-e6fd6eb7f427.png"
+                     class="is-128x128" alt="Hasan icon">
             </a>
-            <a class="navbar-item">
-                AboutMe
+            <h1 class="title" id="title">Hasan</h1>
+
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" @click="isOpen = !isOpen" v-bind:class="{'is-active': isOpen}">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
             </a>
-            <div class="navbar-item has-dropdown is-hoverable">
-                <a class="navbar-link">
-                    More
+        </div>
+
+        <div id="navbarBasicExample" class="navbar-menu" v-bind:class="{'is-active': isOpen}">
+            <div class="navbar-start">
+                <a class="navbar-item">
+                    AboutMe
                 </a>
-                <div class="navbar-dropdown">
-                    <a class="navbar-item">
-                        Tech Blog
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">
+                        More
                     </a>
-                    <a class="navbar-item">
-                        Music Blog
-                    </a>
-                    <a class="navbar-item">
-                        Blog
-                    </a>
-                    <hr class="navbar-divider">
-                    <a class="navbar-item">
-                        Contact
-                    </a>
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item">
+                            Tech Blog
+                        </a>
+                        <a class="navbar-item">
+                            Music Blog
+                        </a>
+                        <a class="navbar-item">
+                            Blog
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a class="button is-primary">
+                            <strong>Contact</strong>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="navbar-end">
-            <div class="navbar-item">
-                <div class="buttons">
-                    <a class="button is-primary">
-                        <strong>Sign up</strong>
-                    </a>
-                    <a class="button is-light">
-                        Log in
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</nav>
+    </nav>
+</div>
 <div class="columns">
     <div class="column is-6-desktop is-offset-3-desktop">
         <div class="card">
@@ -137,3 +130,12 @@
 </div>
 </body>
 </html>
+
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            isOpen: false
+        }
+    })
+</script>
